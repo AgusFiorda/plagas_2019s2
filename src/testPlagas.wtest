@@ -1,0 +1,19 @@
+import plagas.*
+test "testX" {
+	const p1 =new Pulgas()
+	const m1= new Cucarachas()
+	
+	p1.poblacion(30)
+	m1.poblacion(40)
+	m1.peso(8)
+	
+	
+	assert.notThat(m1.transmiteEnfermedades())
+	assert.equals(20,m1.nivelDeDanio())
+	assert.equals(40,m1.poblacion())
+	
+	assert.equals(60,p1.nivelDeDanio())
+	assert.that(p1.transmiteEnfermedades())
+	
+
+}

@@ -1,0 +1,23 @@
+import blancosdeataque.*
+import plagas.*
+test "testX" {
+
+	const h1= new Hogar()
+	h1.nivelDeMugre(9)
+	h1.confortQueOfrece(5)
+	const m1= new Mascota()
+	m1.nivelDeSalud(300)
+	const m2= new Mascota()
+	m2.nivelDeSalud(210)
+	
+	const b1 = new Barrios()
+	b1.agregarElemento(h1)
+	b1.agregarElemento(m1)
+	b1.agregarElemento(m2)
+	
+	
+	assert.that(h1.esBueno())
+	
+	assert.that(b1.esCopado())
+
+}

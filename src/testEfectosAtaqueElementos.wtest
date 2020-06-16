@@ -1,0 +1,22 @@
+import plagas.*
+import blancosdeataque.*
+test "testX" {
+	const h1 = new Hogar()
+	const p1 =new Pulgas()
+	const g1= new Garrapatas()
+	const huerta1= new Huerta()
+	const m1 = new Mascota()
+	huerta1.capacidadDeProduccion(100)
+	p1.poblacion(30)
+	h1.nivelDeMugre(9)
+	h1.confortQueOfrece(5)
+	p1.ataca(h1)
+	g1.poblacion(40)
+	g1.ataca(huerta1)
+	m1.nivelDeSalud(300)
+	g1.ataca(m1)
+	
+	assert.equals(69,h1.nivelDeMugre())
+	assert.equals(82,huerta1.capacidadDeProduccion())
+	assert.equals(220,m1.nivelDeSalud())
+}
